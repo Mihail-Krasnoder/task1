@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interesting Facts</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Which one is false?</h1>
+        </header>
+        <main>
+            <div class="fact">
+                <h2>Personal Facts About Myself</h2>
+                <ul>
+                    <li>My previous job is a private security service.</li>
+                    <li>When I was a kid, I won a guitar competition.</li>
+                    <li class="hidden block1">❌ Lie: When I was a kid, I won a piano competition.</li>
+                    <li>My last name comes from the name of the Greek peninsula.</li>
+                    <div class="button-container">
+                      <button class="reveal1">Reveal</button>
+                  </div>
+                </ul>
+            </div>
+            <div class="fact">
+                <h2>Cultural Facts or World Records</h2>
+                <ul>
+                    <li>Ukraine is the largest country located entirely in Europe by area.</li>
+                    <li>The world’s first heart transplant was performed in Kyiv.</li>
+                    <li class="hidden block2">❌ Lie: The first human heart transplant was not performed in Kyiv — it was done in South Africa in 1967.</li>
+                    <li>Tunnel of Love in Klevan is one of the most romantic destinations in Europe.</li>
+                    <div class="button-container">
+                        <button class="reveal2">Reveal</button>
+                    </div>
+                </ul>
+            </div>
+            <div class="fact">
+                <h2>Interesting or Fun Facts</h2>
+                <ul>
+                    <li>Bananas are technically berries.</li>
+                    <li>A day on Venus is shorter than its year.</li>
+                    <li>Goldfish have a memory span of only 3 seconds.</li>
+                    <li class="hidden block3">❌ Lie: Goldfish can remember things for months, not seconds.</li>
+                    <div class="button-container">
+                      <button class="reveal3">Reveal</button>
+                  </div>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <p>HAVE A GOOD DAY!</p>
+        </footer>
+    </div>
+    <script>
+        document.querySelector(".reveal1").addEventListener("click", () => {
+          document.querySelectorAll(".block1").forEach(item => {
+            item.classList.remove("hidden");
+          });
+        });
+        document.querySelector(".reveal2").addEventListener("click", () => {
+          document.querySelectorAll(".block2").forEach(item => {
+            item.classList.remove("hidden");
+          });
+        });
+        document.querySelector(".reveal3").addEventListener("click", () => {
+          document.querySelectorAll(".block3").forEach(item => {
+            item.classList.remove("hidden");
+          });
+        });
+      </script>
+</body>
+</html>

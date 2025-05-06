@@ -1,0 +1,9 @@
+@use 'variables' as *;
+@use 'facts' as *;
+
+body {
+    font-family: $font-family;
+    background-color: $background-color;
+    color: $font-color-basic;
+    margin: 0;
+}

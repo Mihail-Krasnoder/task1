@@ -1,0 +1,91 @@
+@use 'variables' as *;
+
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+  header {
+  @include flex;
+  border: 2px solid $font-color-basic;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  margin-left: 20px;
+  margin-right: 20px;
+  }
+  main{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    height: 70vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    .fact{
+      background-color: #27c7bd;
+      margin: 20px;
+      border-radius: 15px;
+      width: 100%;
+      min-height: 200px;
+      @include flex;
+      flex-direction: column;
+      h2{
+        padding: 0 20px 0 20px;
+        letter-spacing: 2px;
+        font-size: 2rem;
+      }
+      ul{
+        padding: 0 20px 20px 20px;
+        list-style: none;
+        display: none;
+        font-size: 1.3rem;
+        li{
+        &::before{
+          content: "❔";
+          color: $font-color-basic;
+          font-size: 20px;
+          margin-right: 10px;
+        }
+        &.hidden{
+          display: none;
+        }
+       }
+       .button-container{
+        @include flex;
+        margin-top: 20px;
+        button{
+          width: 100px;
+          height: 40px;
+          background-color: $background-color;
+          border: none;
+          color: $font-color-basic;
+          justify-self: center;
+          border-radius: 15px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+          cursor: pointer;
+          font-size: 1.1rem;
+          &:active{
+            background-color: #93d8d0;
+            transform: scale(0.90);
+          }
+         }
+       }
+      }
+      &:hover{
+        background-color: #1f9b8c;
+        ul{
+          display: block;
+        }
+      }
+    }
+  }
+  footer{
+    @include flex;
+    font-size: 1.5rem;
+    color: $font-color-secondary
+  }
+}
